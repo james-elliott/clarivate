@@ -1,0 +1,67 @@
+.sidenav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidenav a {
+  display: block;
+  color: #717171;
+  margin-bottom: 4px;
+  padding-left: 36px;
+  border-left: 4px solid transparent;
+  text-decoration: none;
+  line-height: 2.166667em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 0;
+}
+
+.sidenav a.active {
+  color: #2d3b8f;
+}
+
+.sidenav .nav-list a.nav-link.active:not(.group) {
+  border-color: #2d3b8f;
+  background: rgba(45,59,143,0.05);
+}
+
+.sidenav a.group,
+.sidenav a.section {
+  font-weight: 500;
+}
+
+.sidenav a.section {
+  font-size: 16px;
+}
+
+.sidenav .nav-list,
+.sidenav ul {
+  height: 0;
+  overflow: hidden;
+}
+
+.sidenav .active + .nav-list,
+.sidenav .active + ul {
+  height: auto;
+}
+
+.sidenav .spacer {
+  opacity: 0;
+}
+
+.sidenav clr-icon {
+  margin-right: 4px;
+  margin-top: -2px;
+}
+
+.sidenav .mdi {
+  height: 18px;
+  width: 18px;
+  margin: 4px;
+}
+
+.sidenav .mdi::before {
+  vertical-align: bottom;
+}

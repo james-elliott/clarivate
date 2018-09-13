@@ -1,0 +1,43 @@
+<div class="content-container">
+  <main class="content-area">
+    <router-outlet></router-outlet>
+  </main>
+
+  <nav *ngIf="sections?.length > 0" class="sidenav" >
+    <section class="sidenav-content">
+      <ng-container *ngFor="let section of sections">
+        <section class="section">
+
+          <a routerLinkActive="active"
+            class="nav-link section"
+            routerLink="../{{section.path}}">
+            <i [ngClass]="['mdi', section.icon]" aria-hidden="true"></i>
+            <span>{{section.title}}</span>
+          </a>
+          <ul class="nav-list">
+            <li *ngFor="let link of section.children">
+              <a [ngClass]="{'nav-link': true, 'group': link.group}"
+                 routerLinkActive="active"
+                 #rla="routerLinkActive"
+                 routerLink="../{{section.path}}/{{link.path}}">
+                 <i [ngClass]="{'mdi': true, 'mdi-menu-down': rla.isActive, 'mdi-menu-right': !rla.isActive, 'spacer': !link.group}" aria-hidden="true"></i>
+                 <span>{{link.title}}</span>
+               </a>
+              <ul *ngIf='link.group'>
+                <li *ngFor="let sublink of link.children">
+                  <a class="nav-link"
+                    routerLinkActive="active"
+                    routerLink="../{{section.path}}/{{link.path}}/{{sublink.path}}">
+                    <i class="mdi mdi-menu-down spacer"></i>
+                    <span>{{sublink.title}}</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+      </ng-container>
+    </section>
+  </nav>
+</div>

@@ -1,0 +1,13 @@
+<nav class="subnav" [clr-nav-level]="2">
+  <ul class="nav">
+    <li *ngFor="let link of links" class="nav-item">
+      <a routerLinkActive="active"
+         ngClass="nav-link"
+         routerLink="{{link.path}}">
+         {{link.title}}
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

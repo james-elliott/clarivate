@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+h1.title {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.dropdown h1.title.dropdown-toggle {
+  padding-right: 1rem;
+}
+
+.dropdown h1.title.dropdown-toggle clr-icon[shape^=caret] {
+  height: .7rem;
+  width: .7rem;
+}

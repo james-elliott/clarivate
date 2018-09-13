@@ -1,0 +1,20 @@
+<clr-dropdown *ngIf="droptitle">
+  <ng-container >
+    <h1 class="title" clrDropdownTrigger>
+        {{title}}
+        <clr-icon shape="caret down"></clr-icon>
+    </h1>
+    <clr-dropdown-menu *clrIfOpen>
+        <a *ngFor="let link of links"
+          clrDropdownItem
+          class="dropdown-item"
+          routerLink="../{{link.path}}">
+          {{link.title}}
+        </a>
+    </clr-dropdown-menu>
+  </ng-container>
+</clr-dropdown>
+
+<h1 class="title" *ngIf="!droptitle">{{title}}</h1>
+
+<!-- <router-outlet></router-outlet> -->

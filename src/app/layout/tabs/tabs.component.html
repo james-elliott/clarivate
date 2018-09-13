@@ -1,0 +1,15 @@
+
+<h1 class="title">{{title}}</h1>
+
+<ul class="nav">
+  <li class="nav-item" *ngFor="let tab of tabs">
+    <button
+      class="btn btn-link nav-link"
+      routerLinkActive="active"
+      routerLink="../{{tab.path}}">
+      {{tab.title}}
+    </button>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

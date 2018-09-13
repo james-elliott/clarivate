@@ -1,0 +1,6 @@
+<div class="breadcrumbs">
+  <ng-container *ngFor="let link of links; let index = index">
+    <span class="spacer" *ngIf="index != 0">/</span>
+    <a routerLink="{{link.path}}" routerLinkActive="active">{{link.title}}</a>
+  </ng-container>
+</div>

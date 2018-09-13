@@ -1,0 +1,21 @@
+<clr-header class="header">
+  <div class="branding">
+    <a routerLink="/"><span class="title">CloudHealth</span></a>
+  </div>
+  <div class="header-nav" [clr-nav-level]="1">
+    <a *ngFor="let link of links" routerLinkActive="active" routerLink="/{{link.path}}" ngClass="nav-link nav-text">{{link.data.title}}</a>
+  </div>
+
+  <div class="header-actions">
+    <a href="javascript://" class="nav-link nav-icon"><i class="mdi mdi-account-circle"></i></a>
+    <a href="javascript://" class="nav-link nav-icon"><i class="mdi mdi-bell-outline"></i></a>
+    <a href="javascript://" class="nav-link nav-icon"><i class="mdi mdi-help-circle-outline"></i></a>
+  </div>
+
+</clr-header>
+
+<!-- <app-subnav></app-subnav> -->
+
+<!-- <div class="content-container"> -->
+  <!-- <router-outlet></router-outlet> -->
+<!-- </div> -->

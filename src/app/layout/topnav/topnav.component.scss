@@ -1,0 +1,62 @@
+.header-actions .mdi {
+  font-size: 24px;
+}
+
+.header-actions .nav-link {
+  text-align: center;
+}
+
+.header {
+  background: #152946;
+  height: 50px;
+}
+
+.header .header-nav .nav-link.nav-text,
+.header .branding .title,
+.header .branding>a,
+.header .header-actions,
+.header .header-nav,
+.header .header-actions .nav-link.nav-icon {
+  height: 50px;
+  line-height: 50px;
+}
+
+.header .header-nav,
+header .header-nav {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+}
+
+.header .header-actions,
+.header .settings,
+header .header-actions,
+header .settings {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .header-nav .nav-link,
+.header .header-actions .nav-link {
+  transition: border 200ms, background 200ms;
+  opacity: 1;
+}
+
+.header .header-nav .nav-link:hover,
+.header .header-actions .nav-link:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.header .header-nav .nav-link.active {
+  background: transparent;
+  border-bottom: 3px solid #7ee6c6;
+  color: #7ee6c6;
+}
+
+.header .header-nav .nav-link:first-of-type::before,
+.header .header-nav .nav-link:last-of-type::after,
+header .header-nav .nav-link:first-of-type::before,
+header .header-nav .nav-link:last-of-type::after {
+  display: none;
+}
